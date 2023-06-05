@@ -57,6 +57,3 @@ production:
   <<: *default
   adapter: postgresql
   url: <%= ENV['DATABASE_URL'] %>
-  database: gym_production
-  username: gym
-  password: <%= ENV['GYM_DATABASE_PASSWORD'] %>
