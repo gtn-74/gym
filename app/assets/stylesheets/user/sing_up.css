@@ -9,9 +9,6 @@
   font-size: 24px;
   font-weight: 500;
 }
-.form-arrange{
-
-}
 
 .form__text {
   width: 50%;
@@ -22,6 +19,17 @@
   display: block;
   justify-content: center;
   align-items: center;
+}
+
+.format{
+  width: 310px;
+  margin-top: 5px;
+  height: 45px;
+  padding-left: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 12px;
 }
 
 .actions{
@@ -45,4 +53,25 @@
 .form__btn:hover {
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
   cursor: pointer;
+}
+.input-birth-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input-birth-wrap select {
+  width: 75px;
+  margin-top: 5px;
+  height: 45px;
+  padding-left: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.input-birth-wrap p {
+  line-height: 60px;
+  padding: 0 5px;
 }
