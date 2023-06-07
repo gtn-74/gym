@@ -3,13 +3,13 @@
     <div class="form__wrapper">
       <h2 class="page-heading">新規登録</h2>
 
-        <%# 「モデル名」にはUserモデルであれば@userを渡しましょう。%>
-        <%# 「新規登録機能へのパス」は、devise導入後にrails routesを実行してdevise/registrations#createへのパスを確認し、記載してください。 %>
-        <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+      <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+
+        <%= render 'shared/error_messages', model: f.object %>
 
           <div class="field">
-            <%= f.label :nickname, "ユーザー名" %><br />
-            <%= f.text_field :nickname, class: "format" %>
+            <%= f.label :username, "ユーザー名" %><br />
+            <%= f.text_field :username, class: "format" %>
           </div>
 
           <div class="field">
@@ -28,25 +28,16 @@
           </div>
 
           <div class="field">
-            <%= f.label :family_name, "姓" %><br />
-            <%= f.text_field :family_name, class: "format"  %>
+            <%= f.label :name, "氏名" %><br />
+            <%= f.text_field :name, class: "format"  %>
           </div>
+
 
           <div class="field">
-            <%= f.label :first_name, "名" %><br />
-            <%= f.text_field :first_name, class: "format"  %>
+            <%= f.label :name_kana, "氏名カナ" %><br />
+            <%= f.text_field :name_kana, class: "format"  %>
           </div>
-
-          <div class="field">
-            <%= f.label :family_name_kana, "姓カナ" %><br />
-            <%= f.text_field :family_name_kana, class: "format"  %>
-          </div>
-
-          <div class="field">
-            <%= f.label :first_name_kana, "名カナ" %><br />
-            <%= f.text_field :first_name_kana, class: "format"  %>
-          </div>
-
+          
           <div class="field">
             <%= f.label :club_team, "クラブチーム名" %><br />
             <%= f.text_field :club_team, class: "format"  %>
@@ -70,7 +61,7 @@
           <div class="actions">
             <%= f.submit "新規登録", class: :form__btn %>
           </div>
-        <% end %>
+      <% end %>
     </div>
   </div>
 </div>
